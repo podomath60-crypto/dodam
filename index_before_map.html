@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="정읍 도담문화여가토탈센터 - 어르신의 건강하고 즐거운 일상을 위한 노인문화여가토탈서비스 제공기관" />
+  <title>도담문화여가토탈센터</title>
+  <style>
+    :root{
+      --cream:#fffaf3; --cream2:#f8efe2; --paper:#fffdf9;
+      --coral:#d9896f; --coral-dark:#a95743; --sage:#7f9472;
+      --sage-light:#e5eddf; --yellow:#e9c86e; --ink:#453b35;
+      --muted:#746961; --line:#eadfd3; --shadow:0 18px 50px rgba(82,60,45,.11);
+      --radius:26px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--cream);color:var(--ink);font-family:"Pretendard","Noto Sans KR","Apple SD Gothic Neo",sans-serif;line-height:1.65}
+    a{text-decoration:none;color:inherit}
+    img,svg{display:block;max-width:100%}
+    .wrap{width:min(1160px,calc(100% - 36px));margin:auto}
+    .nav{position:sticky;top:0;z-index:30;background:rgba(255,250,243,.91);backdrop-filter:blur(14px);border-bottom:1px solid rgba(234,223,211,.85)}
+    .nav-inner{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:-.04em}
+    .brand-mark{width:42px;height:42px;border-radius:15px;background:var(--sage-light);display:grid;place-items:center}
+    .brand strong{font-size:18px}.brand small{display:block;font-size:11px;font-weight:600;color:var(--muted);letter-spacing:0}
+    .menu{display:flex;gap:25px;font-size:14px;font-weight:700;color:#655a52}
+    .nav-call{padding:11px 17px;background:var(--coral);color:white;border-radius:999px;font-weight:800;font-size:14px}
+    .hero{padding:72px 0 58px;position:relative;overflow:hidden}
+    .blob{position:absolute;border-radius:999px;filter:blur(2px);opacity:.65;pointer-events:none}
+    .blob.a{width:340px;height:340px;background:#f3d9ca;right:-100px;top:20px}
+    .blob.b{width:220px;height:220px;background:#e5eddf;left:-80px;bottom:0}
+    .hero-grid{display:grid;grid-template-columns:1.02fr .98fr;align-items:center;gap:58px;position:relative}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 13px;border-radius:999px;background:var(--sage-light);color:#617358;font-size:13px;font-weight:800}
+    h1{font-family:"Nanum Myeongjo","Noto Serif KR",serif;font-size:clamp(43px,5.2vw,70px);line-height:1.15;letter-spacing:-.055em;margin:22px 0 22px}
+    h1 em{font-style:normal;color:var(--coral-dark)}
+    .hero-copy{font-size:19px;color:#6a5f57;max-width:620px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 22px;border-radius:999px;font-weight:800;border:1px solid var(--line);background:white}
+    .btn.primary{background:var(--coral);border-color:var(--coral);color:#fff}
+    .btn.secondary{background:rgba(255,255,255,.7)}
+    .hero-note{margin-top:19px;font-size:13px;color:#81766e}
+    .hero-visual{background:linear-gradient(145deg,#fffdf9,#f7eadf);border:1px solid #eadfd3;border-radius:38px;padding:20px;box-shadow:var(--shadow);position:relative}
+    .float-card{position:absolute;background:white;border:1px solid var(--line);box-shadow:0 10px 30px rgba(76,54,42,.12);border-radius:18px;padding:12px 16px;font-size:13px;font-weight:800}
+    .float-card.one{left:-18px;bottom:50px}.float-card.two{right:-12px;top:42px}
+    section{padding:82px 0}
+    .section-kicker{color:var(--coral-dark);font-size:13px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+    .section-title{font-family:"Nanum Myeongjo","Noto Serif KR",serif;font-size:clamp(32px,4vw,49px);line-height:1.24;letter-spacing:-.045em;margin:11px 0 18px}
+    .section-lead{max-width:760px;color:var(--muted);font-size:17px}
+    .about{background:var(--paper)}
+    .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:55px;align-items:center}
+    .mini-ill{background:#f4eadf;border-radius:32px;padding:22px;border:1px solid var(--line)}
+    .values{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:30px}
+    .value{padding:20px;border-radius:20px;background:var(--cream);border:1px solid var(--line)}
+    .value b{display:block;margin-bottom:6px}.value span{font-size:14px;color:var(--muted)}
+    .programs{background:linear-gradient(180deg,var(--cream) 0,#f8f1e7 100%)}
+    .program-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:38px}
+    .program-card{background:white;border:1px solid var(--line);border-radius:24px;padding:22px;box-shadow:0 12px 35px rgba(70,52,40,.07);transition:.2s transform}
+    .program-card:hover{transform:translateY(-5px)}
+    .program-card .icon{height:145px;border-radius:18px;margin-bottom:18px;overflow:hidden;background:#f6eee5}
+    .program-card h3{font-size:20px;margin:0 0 9px;letter-spacing:-.03em}
+    .program-card p{margin:0;font-size:14px;color:var(--muted)}
+    .program-label{display:inline-block;margin-top:15px;padding:5px 9px;border-radius:999px;background:var(--sage-light);font-size:11px;font-weight:800;color:#64765b}
+    .notice{margin-top:25px;padding:18px 20px;border-radius:18px;background:#fff8dd;border:1px solid #ead89a;color:#6f6030;font-size:14px}
+    .guide{background:var(--paper)}
+    .guide-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:32px;align-items:stretch;margin-top:35px}
+    .price-card{background:#62765a;color:#fff;border-radius:30px;padding:32px;position:relative;overflow:hidden}
+    .price-card:after{content:"";position:absolute;width:240px;height:240px;border-radius:50%;background:rgba(255,255,255,.08);right:-80px;bottom:-100px}
+    .price-card h3{font-size:25px;margin:0 0 18px}.price{font-size:48px;font-weight:900;letter-spacing:-.05em}.price small{font-size:15px;font-weight:700}
+    .price-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:25px}
+    .price-box{padding:16px;border-radius:18px;background:rgba(255,255,255,.11)}
+    .price-box span{font-size:12px;opacity:.8}.price-box b{display:block;font-size:20px;margin-top:4px}
+    .eligibility{background:var(--cream);border:1px solid var(--line);border-radius:30px;padding:30px}
+    .eligibility h3{margin:0 0 18px;font-size:24px}.check{display:flex;gap:12px;margin:13px 0;color:#655b53}.check i{font-style:normal;width:27px;height:27px;border-radius:50%;background:var(--sage-light);display:grid;place-items:center;flex:0 0 auto;font-weight:900;color:#64765b}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:22px}
+    .step{padding:20px;border-radius:22px;border:1px solid var(--line);background:white}.step-num{font-size:12px;font-weight:900;color:var(--coral-dark)}.step b{display:block;font-size:17px;margin:7px 0}.step p{font-size:13px;color:var(--muted);margin:0}
+    .location{background:#f1e8dc}
+    .location-card{display:grid;grid-template-columns:.9fr 1.1fr;background:white;border:1px solid var(--line);border-radius:34px;overflow:hidden;box-shadow:var(--shadow)}
+    .map-art{min-height:430px;background:#e6eddc;position:relative;display:grid;place-items:center;padding:30px}
+    .map-art .road{position:absolute;background:#fff7e9;border:7px solid rgba(255,255,255,.8);border-radius:40px;transform:rotate(-18deg)}
+    .map-art .road.one{width:130%;height:56px;left:-80px;top:175px}.map-art .road.two{width:56px;height:125%;left:48%;top:-50px;transform:rotate(12deg)}
+    .pin{position:relative;z-index:2;width:110px;height:110px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--coral);display:grid;place-items:center;box-shadow:0 14px 28px rgba(116,66,52,.28)}
+    .pin:after{content:"도담";transform:rotate(45deg);color:white;font-size:20px;font-weight:900}
+    .location-info{padding:45px}.location-info h2{font-family:"Nanum Myeongjo","Noto Serif KR",serif;font-size:40px;line-height:1.2;margin:0 0 22px}
+    .info-row{display:flex;gap:14px;padding:15px 0;border-bottom:1px solid var(--line)}
+    .info-row b{width:70px}.info-row span{color:var(--muted)}
+    .location-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:27px}
+    .faq{background:var(--paper)}
+    details{background:var(--cream);border:1px solid var(--line);border-radius:18px;padding:0 20px;margin:10px 0}
+    summary{cursor:pointer;font-weight:800;padding:19px 0}details p{color:var(--muted);margin:0 0 20px}
+    footer{background:#4b433d;color:#eee7e0;padding:45px 0 95px}
+    .footer-grid{display:flex;justify-content:space-between;gap:30px;align-items:flex-end}.footer-grid small{color:#c8bdb5}
+    .mobile-bar{display:none}
+    @media(max-width:920px){
+      .menu{display:none}.hero-grid,.about-grid,.guide-grid,.location-card{grid-template-columns:1fr}.hero{padding-top:45px}.hero-visual{max-width:670px}.program-grid{grid-template-columns:repeat(2,1fr)}.values,.steps{grid-template-columns:repeat(2,1fr)}.map-art{min-height:300px}.footer-grid{display:block}.nav-call{display:none}
+      .mobile-bar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:12px;right:12px;bottom:12px;z-index:50;box-shadow:0 15px 40px rgba(55,40,31,.2);border-radius:18px;overflow:hidden}.mobile-bar a{padding:15px;text-align:center;font-weight:900;background:white}.mobile-bar a:last-child{background:var(--coral);color:white}
+    }
+    @media(max-width:620px){
+      .wrap{width:min(100% - 24px,1160px)}.nav-inner{height:67px}.brand small{display:none}.hero-grid{gap:32px}.float-card{display:none}.program-grid,.values,.steps{grid-template-columns:1fr}.hero-copy{font-size:17px}.section-title{font-size:35px}.location-info{padding:30px 22px}.price-row{grid-template-columns:1fr}.hero-actions .btn{width:100%}
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top" aria-label="도담문화여가토탈센터 홈">
+        <span class="brand-mark" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 26 26"><path d="M13 23c5-4 8-8 8-13a4.2 4.2 0 0 0-7.8-2.2A4.2 4.2 0 0 0 5 10c0 5 3 9 8 13Z" fill="#7f9472"/><circle cx="13" cy="11" r="3" fill="#fffaf3"/></svg>
+        </span>
+        <span><strong>도담문화여가토탈센터</strong><small>DODAM CULTURE &amp; LEISURE CENTER</small></span>
+      </a>
+      <div class="menu"><a href="#about">센터소개</a><a href="#programs">서비스</a><a href="#guide">이용안내</a><a href="#location">오시는 길</a></div>
+      <a class="nav-call" href="tel:01088946676">상담전화 010-8894-6676</a>
+    </div>
+  </nav>
+
+  <main id="top">
+    <header class="hero">
+      <div class="blob a"></div><div class="blob b"></div>
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow">🌿 정읍시 노인문화여가토탈서비스 제공기관</span>
+          <h1>오늘에 즐거움을 더하고,<br><em>일상에 따뜻함</em>을 나눕니다.</h1>
+          <p class="hero-copy">도담문화여가토탈센터는 어르신의 정서적 안정과 사회참여, 건강한 여가생활을 돕는 지역사회서비스 제공기관입니다.</p>
+          <div class="hero-actions"><a class="btn primary" href="tel:01088946676">전화로 상담하기</a><a class="btn secondary" href="#guide">이용방법 알아보기</a></div>
+          <p class="hero-note">※ 세부 프로그램과 이용 가능 여부는 상담을 통해 안내드립니다.</p>
+        </div>
+        <div class="hero-visual" aria-label="어르신들이 함께 만들기 활동을 하는 따뜻한 일러스트">
+          <svg viewBox="0 0 640 510" role="img">
+            <rect width="640" height="510" rx="30" fill="#f7ecdf"/>
+            <circle cx="512" cy="88" r="46" fill="#e9c86e" opacity=".7"/>
+            <path d="M0 375C128 325 188 427 322 376c124-47 207-7 318 42v92H0Z" fill="#dfe9d7"/>
+            <rect x="105" y="285" width="430" height="28" rx="14" fill="#a66e52"/>
+            <rect x="134" y="307" width="24" height="122" rx="10" fill="#895d47"/><rect x="485" y="307" width="24" height="122" rx="10" fill="#895d47"/>
+            <g transform="translate(70 98)">
+              <circle cx="95" cy="77" r="42" fill="#f2c8aa"/><path d="M56 74c4-48 74-58 84-7-28-16-53-11-84 7Z" fill="#f5f1eb"/><path d="M45 207c6-74 32-107 67-107s62 34 67 107Z" fill="#d9896f"/><rect x="60" y="196" width="52" height="16" rx="8" transform="rotate(24 60 196)" fill="#f2c8aa"/><circle cx="96" cy="76" r="4" fill="#59483e"/><path d="M82 91q14 12 28 0" fill="none" stroke="#a45f55" stroke-width="4" stroke-linecap="round"/>
+            </g>
+            <g transform="translate(425 105)">
+              <circle cx="70" cy="70" r="40" fill="#efc4a4"/><path d="M34 66c2-45 65-52 76-9-25-13-47-10-76 9Z" fill="#8d8179"/><path d="M12 203c5-72 29-103 61-103s57 31 62 103Z" fill="#7f9472"/><circle cx="70" cy="70" r="4" fill="#59483e"/><path d="M57 86q13 11 26 0" fill="none" stroke="#a45f55" stroke-width="4" stroke-linecap="round"/>
+            </g>
+            <g transform="translate(246 110)">
+              <circle cx="75" cy="64" r="41" fill="#f1c3a2"/><path d="M38 60c3-43 66-49 76-7-27-13-49-9-76 7Z" fill="#ede8e0"/><path d="M18 198c4-69 28-99 60-99s57 30 61 99Z" fill="#e2b857"/><circle cx="75" cy="65" r="4" fill="#59483e"/><path d="M61 81q14 12 28 0" fill="none" stroke="#a45f55" stroke-width="4" stroke-linecap="round"/>
+            </g>
+            <ellipse cx="318" cy="284" rx="65" ry="20" fill="#ead2bd"/><path d="M285 266q33-45 66 0v24h-66Z" fill="#b9caa8"/><circle cx="311" cy="252" r="6" fill="#d9896f"/><circle cx="331" cy="247" r="6" fill="#e9c86e"/><circle cx="343" cy="261" r="6" fill="#7f9472"/>
+            <path d="M171 270q75-38 137 1M472 273q-69-38-127 1" fill="none" stroke="#efc4a4" stroke-width="18" stroke-linecap="round"/>
+            <g fill="#7f9472" opacity=".55"><circle cx="71" cy="62" r="8"/><circle cx="96" cy="44" r="5"/><circle cx="565" cy="190" r="7"/><circle cx="585" cy="165" r="4"/></g>
+          </svg>
+          <div class="float-card one">함께 만들고, 함께 웃는 시간</div><div class="float-card two">주 1회 · 월 4회</div>
+        </div>
+      </div>
+    </header>
+
+    <section class="about" id="about">
+      <div class="wrap about-grid">
+        <div class="mini-ill">
+          <svg viewBox="0 0 520 430" role="img" aria-label="따뜻한 찻잔과 꽃이 있는 휴식 일러스트">
+            <rect width="520" height="430" rx="28" fill="#efe6d8"/>
+            <circle cx="115" cy="90" r="45" fill="#dfe9d7"/><circle cx="398" cy="76" r="28" fill="#f2d6c8"/>
+            <path d="M110 323h302" stroke="#9c765e" stroke-width="16" stroke-linecap="round"/>
+            <path d="M165 190h138v87c0 35-27 63-61 63h-16c-34 0-61-28-61-63Z" fill="#fffdf9" stroke="#c8aa91" stroke-width="6"/>
+            <path d="M303 215h32c35 0 39 67-5 67h-23" fill="none" stroke="#c8aa91" stroke-width="10"/>
+            <path d="M213 178c-12-24 18-31 3-56M254 178c-12-24 18-31 3-56" fill="none" stroke="#d9896f" stroke-width="8" stroke-linecap="round" opacity=".65"/>
+            <path d="M362 302c-3-78 20-128 62-157" fill="none" stroke="#7f9472" stroke-width="9"/>
+            <g fill="#d9896f"><circle cx="424" cy="146" r="15"/><circle cx="394" cy="174" r="13"/><circle cx="438" cy="188" r="12"/></g>
+            <g fill="#7f9472"><ellipse cx="389" cy="220" rx="23" ry="10" transform="rotate(-32 389 220)"/><ellipse cx="426" cy="239" rx="24" ry="10" transform="rotate(33 426 239)"/></g>
+          </svg>
+        </div>
+        <div>
+          <div class="section-kicker">About Dodam</div>
+          <h2 class="section-title">도담은 편안하게 만나고,<br>즐겁게 참여하는 공간입니다.</h2>
+          <p class="section-lead">노년의 일상에 활력과 관계를 더할 수 있도록 문화·여가활동, 정서지원, 건강관리와 사회참여 프로그램을 제공합니다. 참여자의 욕구와 상황을 살펴 적합한 서비스를 함께 선택합니다.</p>
+          <div class="values">
+            <div class="value"><b>따뜻한 관계</b><span>서로의 이야기를 나누며 정서적 지지를 쌓습니다.</span></div>
+            <div class="value"><b>즐거운 참여</b><span>배우고 만들고 움직이며 생활의 활력을 찾습니다.</span></div>
+            <div class="value"><b>지역사회 연결</b><span>문화체험과 사회참여를 통해 이웃과 연결됩니다.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="programs" id="programs">
+      <div class="wrap">
+        <div class="section-kicker">Service Areas</div>
+        <h2 class="section-title">노인문화여가토탈서비스의<br>주요 활동 영역</h2>
+        <p class="section-lead">이용자가 자신의 욕구에 맞는 프로그램을 선택하고, 제공기관은 선택형 프로그램과 문화여가증진 프로그램을 함께 제공합니다.</p>
+        <div class="program-grid">
+          <article class="program-card">
+            <div class="icon"><svg viewBox="0 0 300 180"><rect width="300" height="180" rx="22" fill="#f1e6dc"/><circle cx="90" cy="83" r="37" fill="#f0c3a4"/><path d="M50 81c1-42 68-45 79-6-25-12-50-10-79 6Z" fill="#eee9e2"/><path d="M35 170c7-61 28-83 58-83s52 22 59 83Z" fill="#d9896f"/><rect x="157" y="37" width="105" height="105" rx="20" fill="#fffdf9"/><path d="M179 68h62M179 92h45M179 116h53" stroke="#7f9472" stroke-width="9" stroke-linecap="round"/><circle cx="91" cy="83" r="4" fill="#4b4039"/></svg></div>
+            <h3>인지·정서 지원</h3><p>두뇌활동, 회상·대화, 미술·음악·공예 등으로 정서적 안정과 인지 자극을 돕습니다.</p><span class="program-label">선택형 프로그램</span>
+          </article>
+          <article class="program-card">
+            <div class="icon"><svg viewBox="0 0 300 180"><rect width="300" height="180" rx="22" fill="#e8efdf"/><circle cx="150" cy="92" r="58" fill="#fffdf9"/><path d="M150 52v40l27 17" fill="none" stroke="#7f9472" stroke-width="11" stroke-linecap="round"/><circle cx="150" cy="92" r="7" fill="#d9896f"/><path d="M72 145q31-43 62 0M168 145q31-43 62 0" fill="none" stroke="#d9896f" stroke-width="12" stroke-linecap="round"/></svg></div>
+            <h3>건강관리 활동</h3><p>가벼운 체조, 스트레칭, 생활건강 교육 등 일상에서 실천할 수 있는 건강활동을 지원합니다.</p><span class="program-label">선택형 프로그램</span>
+          </article>
+          <article class="program-card">
+            <div class="icon"><svg viewBox="0 0 300 180"><rect width="300" height="180" rx="22" fill="#f7ead3"/><path d="M40 129h220" stroke="#af805f" stroke-width="12" stroke-linecap="round"/><path d="M75 129V67h52v62M173 129V49h52v80" fill="#fffdf9" stroke="#d3b08a" stroke-width="8"/><circle cx="102" cy="50" r="20" fill="#d9896f"/><circle cx="199" cy="31" r="16" fill="#7f9472"/><path d="M61 76q42-35 81 0M160 58q42-35 81 0" fill="none" stroke="#e9c86e" stroke-width="9"/></svg></div>
+            <h3>문화·여가 체험</h3><p>전시·공연 관람, 지역축제, 체험활동 등 일상 밖의 즐거운 문화 경험을 함께합니다.</p><span class="program-label">필수 프로그램</span>
+          </article>
+          <article class="program-card">
+            <div class="icon"><svg viewBox="0 0 300 180"><rect width="300" height="180" rx="22" fill="#e9e4ef"/><circle cx="95" cy="72" r="30" fill="#efc3a3"/><circle cx="203" cy="72" r="30" fill="#efc3a3"/><path d="M55 163c5-52 22-72 43-72s39 20 44 72ZM161 163c5-52 22-72 43-72s39 20 44 72Z" fill="#7f9472"/><path d="M126 113q24 24 48 0" fill="none" stroke="#d9896f" stroke-width="12" stroke-linecap="round"/></svg></div>
+            <h3>사회참여·관계형성</h3><p>소그룹 활동과 지역사회 참여를 통해 관계를 넓히고 사회적 고립을 완화합니다.</p><span class="program-label">선택형 프로그램</span>
+          </article>
+        </div>
+        <div class="notice"><b>안내:</b> 위 내용은 노인문화여가토탈서비스의 공식 서비스 영역을 기준으로 구성한 안내입니다. 도담문화여가토탈센터에서 운영하는 정확한 수업명과 일정은 센터 상담을 통해 확인해 주세요.</div>
+      </div>
+    </section>
+
+    <section class="guide" id="guide">
+      <div class="wrap">
+        <div class="section-kicker">How to Use</div>
+        <h2 class="section-title">이용 대상과 비용을<br>한눈에 확인하세요.</h2>
+        <div class="guide-grid">
+          <div class="price-card">
+            <h3>월 서비스 가격</h3><div class="price">160,000<small>원</small></div>
+            <div class="price-row"><div class="price-box"><span>정부지원금</span><b>144,000원</b></div><div class="price-box"><span>본인부담금</span><b>16,000원</b></div></div>
+            <p style="margin:24px 0 0;opacity:.82">지원기간 12개월 · 재판정 1회 가능<br>주 1회, 월 4회 서비스</p>
+          </div>
+          <div class="eligibility">
+            <h3>주요 이용 기준</h3>
+            <div class="check"><i>✓</i><span>만 60세 이상 또는 기초연금수급자</span></div>
+            <div class="check"><i>✓</i><span>정서적 지지 및 사회참여 활동이 필요한 분</span></div>
+            <div class="check"><i>✓</i><span>기준중위소득 140% 이하</span></div>
+            <div class="check"><i>✓</i><span>면단위 거주자·독거노인·부부 단독세대 등 우선순위 적용</span></div>
+            <p style="font-size:13px;color:var(--muted);margin-top:18px">선정기준과 신청기간은 해당 연도 정읍시 공고에 따라 달라질 수 있습니다.</p>
+          </div>
+        </div>
+        <div class="steps">
+          <div class="step"><span class="step-num">STEP 01</span><b>이용 상담</b><p>센터 또는 주소지 행정복지센터에 이용 가능 여부를 문의합니다.</p></div>
+          <div class="step"><span class="step-num">STEP 02</span><b>바우처 신청</b><p>신분증과 필요한 서류를 준비해 행정복지센터에서 신청합니다.</p></div>
+          <div class="step"><span class="step-num">STEP 03</span><b>제공기관 선택</b><p>선정 후 도담문화여가토탈센터를 제공기관으로 선택합니다.</p></div>
+          <div class="step"><span class="step-num">STEP 04</span><b>프로그램 참여</b><p>상담을 거쳐 본인에게 맞는 프로그램과 일정을 안내받습니다.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="location" id="location">
+      <div class="wrap location-card">
+        <div class="map-art" aria-label="도담문화여가토탈센터 위치 일러스트"><div class="road one"></div><div class="road two"></div><div class="pin"></div></div>
+        <div class="location-info">
+          <div class="section-kicker">Location</div><h2>도담으로<br>오시는 길</h2>
+          <div class="info-row"><b>주소</b><span>전북특별자치도 정읍시 충정로 160, 2층</span></div>
+          <div class="info-row"><b>전화</b><span>010-8894-6676</span></div>
+          <div class="info-row"><b>상담</b><span>방문 전 전화로 상담시간을 확인해 주세요.</span></div>
+          <div class="location-actions">
+            <a class="btn primary" href="tel:01088946676">전화하기</a>
+            <a class="btn" target="_blank" rel="noopener" href="https://map.naver.com/p/search/%EC%A0%84%EB%B6%81%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%A0%95%EC%9D%8D%EC%8B%9C%20%EC%B6%A9%EC%A0%95%EB%A1%9C%20160">네이버지도</a>
+            <a class="btn" target="_blank" rel="noopener" href="https://map.kakao.com/?q=%EC%A0%84%EB%B6%81%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%A0%95%EC%9D%8D%EC%8B%9C%20%EC%B6%A9%EC%A0%95%EB%A1%9C%20160">카카오맵</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq">
+      <div class="wrap">
+        <div class="section-kicker">FAQ</div><h2 class="section-title">자주 묻는 질문</h2>
+        <details><summary>누가 이용할 수 있나요?</summary><p>만 60세 이상 또는 기초연금수급자 중 정서적 지지와 사회참여 활동이 필요하고, 소득기준 등을 충족한 분이 신청할 수 있습니다.</p></details>
+        <details><summary>매주 어떤 수업을 하나요?</summary><p>선택형 프로그램과 월 1회의 문화여가증진 프로그램으로 구성됩니다. 정확한 수업명과 운영 일정은 센터 상담을 통해 안내받을 수 있습니다.</p></details>
+        <details><summary>본인부담금은 얼마인가요?</summary><p>월 서비스 가격 160,000원 중 정부지원금 144,000원, 본인부담금 16,000원으로 안내되어 있습니다. 연도별 사업기준 변경 여부를 확인해 주세요.</p></details>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="wrap footer-grid"><div class="brand"><span class="brand-mark"><svg width="26" height="26" viewBox="0 0 26 26"><path d="M13 23c5-4 8-8 8-13a4.2 4.2 0 0 0-7.8-2.2A4.2 4.2 0 0 0 5 10c0 5 3 9 8 13Z" fill="#7f9472"/><circle cx="13" cy="11" r="3" fill="#fffaf3"/></svg></span><span><strong>도담문화여가토탈센터</strong><small>전북특별자치도 정읍시 충정로 160, 2층</small></span></div><small>© Dodam Culture &amp; Leisure Total Center. All rights reserved.</small></div></footer>
+  <div class="mobile-bar"><a href="#location">오시는 길</a><a href="tel:01088946676">전화 상담</a></div>
+</body>
+</html>
